@@ -105,8 +105,4 @@ Project Link: https://github.com/yourusername/crop-prediction-analysis
 
 <div align="center">
 Made with ❤️ for farmers & sustainable agriculture
-
-
-
-
-</div> ```
+</div>

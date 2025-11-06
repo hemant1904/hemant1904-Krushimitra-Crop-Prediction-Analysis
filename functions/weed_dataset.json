@@ -1,0 +1,466 @@
+{
+  "weed_data": [
+    {
+      "soil_type": "sandy",
+      "moisture": 50,
+      "season": "spring",
+      "density": 40,
+      "height": 25,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Digitaria sanguinalis",
+        "common_name": "Crabgrass",
+        "threat_level": "Medium Threat",
+        "threat_class": "threat-medium",
+        "weed_description": "An annual grass with ovate leaves, spreading aggressively in warm, disturbed soils.",
+        "control_measures": [
+          "Pre-emergent herbicides in early spring",
+          "Regular mowing to prevent seed heads",
+          "Mulching to suppress growth",
+          "Maintaining healthy turf to outcompete"
+        ]
+      }
+    },
+    {
+      "soil_type": "loamy",
+      "moisture": 75,
+      "season": "summer",
+      "density": 65,
+      "height": 50,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Taraxacum officinale",
+        "common_name": "Dandelion",
+        "threat_level": "Low Threat",
+        "threat_class": "threat-low",
+        "weed_description": "A perennial with broad leaves and a deep taproot, known for its bright yellow flowers and wind-dispersed seeds.",
+        "control_measures": [
+          "Manual removal with taproot intact",
+          "Application of broadleaf herbicides",
+          "Encouraging dense crop cover",
+          "Frequent mowing to limit seed spread"
+        ]
+      }
+    },
+    {
+      "soil_type": "clay",
+      "moisture": 65,
+      "season": "fall",
+      "density": 35,
+      "height": 30,
+      "leaf_shape": "narrow",
+      "weed_info": {
+        "scientific_name": "Avena fatua",
+        "common_name": "Wild Oat",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "An annual grass with narrow leaves, highly competitive in cereal crops.",
+        "control_measures": [
+          "Pre-emergent herbicide application",
+          "Crop rotation with non-grass species",
+          "Early tillage to disrupt germination",
+          "Monitoring and removal of late-emerging plants"
+        ]
+      }
+    },
+    {
+      "soil_type": "silt",
+      "moisture": 50,
+      "season": "spring",
+      "density": 50,
+      "height": 40,
+      "leaf_shape": "narrow",
+      "weed_info": {
+        "scientific_name": "Convolvulus arvensis",
+        "common_name": "Field Bindweed",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "A perennial vine with lanceolate leaves, twining around crops with extensive root systems.",
+        "control_measures": [
+          "Repeated cultivation to exhaust roots",
+          "Systemic herbicide application",
+          "Smothering with cover crops",
+          "Long-term management plan"
+        ]
+      }
+    },
+    {
+      "soil_type": "sandy",
+      "moisture": 25,
+      "season": "summer",
+      "density": 20,
+      "height": 15,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Plantago major",
+        "common_name": "Broadleaf Plantain",
+        "threat_level": "Low Threat",
+        "threat_class": "threat-low",
+        "weed_description": "A perennial with elliptic leaves in a rosette, tolerant of compacted soils.",
+        "control_measures": [
+          "Hand-pulling with roots",
+          "Spot treatment with herbicides",
+          "Improving soil drainage",
+          "Encouraging competitive ground cover"
+        ]
+      }
+    },
+    {
+      "soil_type": "loamy",
+      "moisture": 75,
+      "season": "fall",
+      "density": 70,
+      "height": 60,
+      "leaf_shape": "compound",
+      "weed_info": {
+        "scientific_name": "Sonchus arvensis",
+        "common_name": "Perennial Sowthistle",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "A perennial with pinnate leaves and yellow flowers, spreading via deep roots and seeds.",
+        "control_measures": [
+          "Systemic herbicide use in late summer",
+          "Deep plowing to disrupt roots",
+          "Crop rotation with competitive species",
+          "Regular monitoring for regrowth"
+        ]
+      }
+    },
+    {
+      "soil_type": "loamy",
+      "moisture": 50,
+      "season": "spring",
+      "density": 45,
+      "height": 35,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Malva neglecta",
+        "common_name": "Common Mallow",
+        "threat_level": "Medium Threat",
+        "threat_class": "threat-medium",
+        "weed_description": "An annual or biennial with lobed leaves, often found in nutrient-rich, disturbed areas.",
+        "control_measures": [
+          "Early hand-weeding",
+          "Mulching to prevent establishment",
+          "Broadleaf herbicide application",
+          "Crop competition to reduce spread"
+        ]
+      }
+    },
+    {
+      "soil_type": "clay",
+      "moisture": 75,
+      "season": "summer",
+      "density": 60,
+      "height": 55,
+      "leaf_shape": "compound",
+      "weed_info": {
+        "scientific_name": "Trifolium repens",
+        "common_name": "White Clover",
+        "threat_level": "Low Threat",
+        "threat_class": "threat-low",
+        "weed_description": "A perennial with compound leaves and white flowers, often beneficial but invasive in crops.",
+        "control_measures": [
+          "Selective herbicide application",
+          "Mowing to prevent flowering",
+          "Encouraging crop dominance",
+          "Soil nutrient management"
+        ]
+      }
+    },
+    {
+      "soil_type": "sandy",
+      "moisture": 30,
+      "season": "fall",
+      "density": 30,
+      "height": 20,
+      "leaf_shape": "narrow",
+      "weed_info": {
+        "scientific_name": "Bromus tectorum",
+        "common_name": "Cheatgrass",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "An annual grass with linear leaves, highly flammable and invasive in dry regions.",
+        "control_measures": [
+          "Pre-emergent herbicides in early fall",
+          "Controlled grazing to reduce biomass",
+          "Reseeding with native species",
+          "Fire management strategies"
+        ]
+      }
+    },
+    {
+      "soil_type": "clay loam",
+      "moisture": 55,
+      "season": "spring",
+      "density": 55,
+      "height": 45,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Polygonum aviculare",
+        "common_name": "Knotweed",
+        "threat_level": "Medium Threat",
+        "threat_class": "threat-medium",
+        "weed_description": "An annual with broad leaves, forming dense mats in compacted or disturbed soils.",
+        "control_measures": [
+          "Mechanical removal before seed set",
+          "Contact herbicide application",
+          "Improving soil structure",
+          "Mulching to limit growth"
+        ]
+      }
+    },
+    {
+      "soil_type": "sandy loam",
+      "moisture": 45,
+      "season": "summer",
+      "density": 40,
+      "height": 30,
+      "leaf_shape": "narrow",
+      "weed_info": {
+        "scientific_name": "Setaria viridis",
+        "common_name": "Green Foxtail",
+        "threat_level": "Medium Threat",
+        "threat_class": "threat-medium",
+        "weed_description": "Annual grass with cylindrical seed heads, common in cultivated fields and gardens.",
+        "control_measures": [
+          "Pre-emergence herbicide application",
+          "Tillage before seed production",
+          "Crop rotation practices",
+          "Maintaining dense crop canopy"
+        ]
+      }
+    },
+    {
+      "soil_type": "clay",
+      "moisture": 70,
+      "season": "spring",
+      "density": 65,
+      "height": 50,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Rumex crispus",
+        "common_name": "Curly Dock",
+        "threat_level": "Medium Threat",
+        "threat_class": "threat-medium",
+        "weed_description": "Perennial with wavy-edged leaves and tall seed stalks, thriving in wet conditions.",
+        "control_measures": [
+          "Deep digging to remove taproot",
+          "Selective herbicide treatment",
+          "Regular mowing before seed set",
+          "Improving soil drainage"
+        ]
+      }
+    },
+    {
+      "soil_type": "silt loam",
+      "moisture": 60,
+      "season": "summer",
+      "density": 55,
+      "height": 40,
+      "leaf_shape": "compound",
+      "weed_info": {
+        "scientific_name": "Amaranthus retroflexus",
+        "common_name": "Redroot Pigweed",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "Tall annual with reddish taproot and small green flowers in dense terminal spikes.",
+        "control_measures": [
+          "Early season cultivation",
+          "Pre-plant incorporated herbicides",
+          "Crop rotation with competitive crops",
+          "Hand pulling before seed production"
+        ]
+      }
+    },
+    {
+      "soil_type": "sandy",
+      "moisture": 35,
+      "season": "fall",
+      "density": 25,
+      "height": 15,
+      "leaf_shape": "narrow",
+      "weed_info": {
+        "scientific_name": "Echinochloa crus-galli",
+        "common_name": "Barnyardgrass",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "Annual grass with wide leaves and distinctive purple bands, common in wet areas.",
+        "control_measures": [
+          "Pre-emergence herbicide application",
+          "Shallow cultivation",
+          "Water management in rice fields",
+          "Crop rotation strategies"
+        ]
+      }
+    },
+    {
+      "soil_type": "loamy",
+      "moisture": 55,
+      "season": "spring",
+      "density": 50,
+      "height": 35,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Chenopodium album",
+        "common_name": "Common Lambsquarters",
+        "threat_level": "Medium Threat",
+        "threat_class": "threat-medium",
+        "weed_description": "Annual with triangle-shaped leaves covered in a mealy coating, highly adaptable.",
+        "control_measures": [
+          "Pre-emergence herbicide use",
+          "Mechanical cultivation",
+          "Crop rotation planning",
+          "Maintaining crop competitiveness"
+        ]
+      }
+    },
+    {
+      "soil_type": "clay",
+      "moisture": 65,
+      "season": "summer",
+      "density": 60,
+      "height": 45,
+      "leaf_shape": "compound",
+      "weed_info": {
+        "scientific_name": "Cirsium arvense",
+        "common_name": "Canada Thistle",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "Perennial with spiny leaves and extensive root system, difficult to control once established.",
+        "control_measures": [
+          "Systemic herbicide application",
+          "Repeated tillage operations",
+          "Competitive crop establishment",
+          "Biological control agents"
+        ]
+      }
+    },
+    {
+      "soil_type": "sandy loam",
+      "moisture": 40,
+      "season": "fall",
+      "density": 35,
+      "height": 25,
+      "leaf_shape": "narrow",
+      "weed_info": {
+        "scientific_name": "Sorghum halepense",
+        "common_name": "Johnsongrass",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "Tall perennial grass with rhizomes, forms dense colonies in cultivated fields.",
+        "control_measures": [
+          "Integrated chemical control",
+          "Deep plowing to expose rhizomes",
+          "Regular mowing regime",
+          "Competitive crop selection"
+        ]
+      }
+    },
+    {
+      "soil_type": "silt",
+      "moisture": 50,
+      "season": "spring",
+      "density": 45,
+      "height": 30,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Capsella bursa-pastoris",
+        "common_name": "Shepherd's Purse",
+        "threat_level": "Low Threat",
+        "threat_class": "threat-low",
+        "weed_description": "Winter annual with heart-shaped seed pods and rosette growth habit.",
+        "control_measures": [
+          "Early spring cultivation",
+          "Post-emergence herbicides",
+          "Winter cover cropping",
+          "Hand pulling in small areas"
+        ]
+      }
+    },
+    {
+      "soil_type": "clay loam",
+      "moisture": 60,
+      "season": "summer",
+      "density": 55,
+      "height": 40,
+      "leaf_shape": "compound",
+      "weed_info": {
+        "scientific_name": "Solanum carolinense",
+        "common_name": "Horsenettle",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "Perennial with spiny stems and leaves, produces toxic berries and spreads by roots.",
+        "control_measures": [
+          "Systemic herbicide treatment",
+          "Regular cultivation",
+          "Proper pasture management",
+          "Mechanical removal of young plants"
+        ]
+      }
+    },
+    {
+      "soil_type": "loamy",
+      "moisture": 45,
+      "season": "fall",
+      "density": 40,
+      "height": 20,
+      "leaf_shape": "narrow",
+      "weed_info": {
+        "scientific_name": "Eleusine indica",
+        "common_name": "Goosegrass",
+        "threat_level": "Medium Threat",
+        "threat_class": "threat-medium",
+        "weed_description": "Annual grass with flattened stems, forms prostrate rosettes in compacted soils.",
+        "control_measures": [
+          "Pre-emergence herbicide use",
+          "Mechanical removal",
+          "Soil aeration practices",
+          "Proper irrigation management"
+        ]
+      }
+    },
+    {
+      "soil_type": "sandy",
+      "moisture": 30,
+      "season": "spring",
+      "density": 25,
+      "height": 15,
+      "leaf_shape": "broad",
+      "weed_info": {
+        "scientific_name": "Portulaca oleracea",
+        "common_name": "Common Purslane",
+        "threat_level": "Low Threat",
+        "threat_class": "threat-low",
+        "weed_description": "Succulent annual with smooth, reddish stems and small yellow flowers.",
+        "control_measures": [
+          "Shallow cultivation",
+          "Mulching practices",
+          "Pre-emergence herbicides",
+          "Hand pulling before seed set"
+        ]
+      }
+    },
+    {
+      "soil_type": "clay",
+      "moisture": 70,
+      "season": "summer",
+      "density": 65,
+      "height": 55,
+      "leaf_shape": "compound",
+      "weed_info": {
+        "scientific_name": "Euphorbia esula",
+        "common_name": "Leafy Spurge",
+        "threat_level": "High Threat",
+        "threat_class": "threat-high",
+        "weed_description": "Deep-rooted perennial with milky sap, forms dense colonies in pastures and rangeland.",
+        "control_measures": [
+          "Long-term herbicide program",
+          "Biological control insects",
+          "Intensive grazing management",
+          "Competitive vegetation establishment"
+        ]
+      }
+    }
+  ]
+}

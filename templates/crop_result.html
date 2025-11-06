@@ -1,34 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction Result</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --secondary-green: #1a4314;
+            --accent-brown: #8b4513;
+            --accent-wheat: #f5deb3;
+            --text-light: #ffffff;
+            --text-dark: #2c1810;
+            --forest-green: #228b22;
+            --leaf-accent: #90ee90;
+            --deep-forest: #0f2a14;
+            --light-forest: #1b4d25;
+        }
 
-  <title>crop_predict_result</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: 
+                linear-gradient(135deg, #0a2f0a, #1b4d2f),
+                radial-gradient(circle at 50% 50%, rgba(34, 139, 34, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 20% 20%, rgba(0, 100, 0, 0.03) 0%, transparent 30%);
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        .farm-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpath d='M30 10c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm0 15c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z' fill='rgba(144, 238, 144, 0.08)'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M40 20L60 60H20L40 20z' fill='rgba(139, 69, 19, 0.04)'/%3E%3C/svg%3E");
+            background-size: 60px 60px, 80px 80px;
+            opacity: 0.4;
+            z-index: 0;
+            animation: farmFloat 30s linear infinite;
+        }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        .agricultural-elements {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            background-image: 
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 5C35 5 25 15 25 30c0 15 10 25 25 25s25-10 25-25C75 15 65 5 50 5zm0 45c-8.3 0-15-6.7-15-15s6.7-15 15-15 15 6.7 15 15-6.7 15-15 15z' fill='rgba(144, 238, 144, 0.06)'/%3E%3C/svg%3E"),
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M60 10l40 80H20l40-80z' fill='rgba(139, 69, 19, 0.03)'/%3E%3C/svg%3E");
+            background-size: 100px 100px, 120px 120px;
+            opacity: 0.5;
+            animation: patternFloat 40s linear infinite;
+        }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        @keyframes patternFloat {
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 100px 100px, -120px -120px; }
+        }
 
-  <!-- Template Main CSS File -->
-  <link href="static/style.css" rel="stylesheet">
+        .result-container {
+            position: relative;
+            width: 380px;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25),
+                      inset 0 -2px 10px rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 2;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin: 2rem auto;
+            transform-style: preserve-3d;
+            animation: formFloat 4s ease-in-out infinite;
+        }
 
+        .result-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+        }
+
+        .result-container::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            background: #ffffff; /* Changed to solid white */
+            border-radius: 32px;
+            z-index: -1;
+            animation: borderGlow 3s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { opacity: 0.7; filter: blur(3px); }
+            50% { opacity: 1; filter: blur(1px); }
+        }
+
+        h2 {
+            color: #000000;
+            font-size: 1.8rem;
+            margin-bottom: 1.8rem;
+            position: relative;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            white-space: nowrap;
+            width: 100%;
+            letter-spacing: 0.5px;
+        }
+
+        .prediction-card {
+            background: #2d5a27;
+            color: #f6efef;
+            padding: 1.8rem;
+            border-radius: 10px;
+            margin: 1.2rem 0;
+            font-size: 2.4rem;
+            font-weight: 700;
+            text-transform: capitalize;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .result-text {
+            font-size: 2rem;
+            color: #f8f0f0;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            white-space: nowrap;
+            letter-spacing: 1px;
+        }
+
+        .description {
+            color: #000000;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 1.5rem auto;
+            padding: 0 1rem;
+            text-align: center;
+            font-weight: 500;
+            max-width: 85%;
+            white-space: normal;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 2.2rem auto;
+            padding: 1.2rem 2.4rem;
+            background: #2d5a27;
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+            background: #1B4D3E;
+        }
+
+        @media (max-width: 600px) {
+            .result-container {
+                width: 90%;
+                padding: 3rem;
+                margin: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .prediction-card {
+                font-size: 1.5rem;
+                padding: 3rem;
+            }
+
+            .description {
+                font-size: 1.1rem;
+                padding: 0 1rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  {{prediction}}
+    <div class="farm-background"></div>
+    <div class="agricultural-elements"></div>
+
+    <div class="result-container">
+        <h2>🌾 Crop Prediction 🌾</h2>
+        <div class="prediction-card">
+            <div class="result-text"> {{ prediction }} </div>
+        </div>
+        <p class="description">Based on your soil and<br>environmental parameters,<br>this is the most suitable crop for your land.</p>
+        <div class="text-center mt-4">
+            <a href="/crop_recommendation" class="back-button">Check Another Crop</a>
+            <a href="/" class="back-button" style="margin-left: px;">Back to Home</a>
+        </div>
+    </div>
 </body>
+</html>

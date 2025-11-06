@@ -576,7 +576,7 @@ progress {
   --bs-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 1.3333);
   margin-right: auto;
   margin-left: auto;
 }
@@ -603,8 +603,7 @@ progress {
 }
 @media (min-width: 1200px) {
   .container,
-  .container-lg,
-  .container-md,
+  .container-l1.3333tainer-md,
   .container-sm,
   .container-xl {
     max-width: 1140px;
@@ -2709,8 +2708,8 @@ textarea.form-control.is-invalid {
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
-  --bs-btn-color: #212529;
-  --bs-btn-bg: transparent;
+  --bs-btn-color: black;
+  --bs-btn-bg:  rgb(138, 205, 138);
   --bs-btn-border-width: 1px;
   --bs-btn-border-color: transparent;
   --bs-btn-border-radius: 0.375rem;
@@ -7220,7 +7219,7 @@ fieldset:disabled .btn {
   justify-content: flex-end !important;
 }
 .justify-content-center {
-  justify-content: center !important;
+  justify-content: center important;
 }
 .justify-content-between {
   justify-content: space-between !important;

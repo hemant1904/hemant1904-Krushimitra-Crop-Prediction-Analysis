@@ -85,7 +85,7 @@ h6 {
 #header .profile img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 150px;
   border: 8px solid #2c2f3f;
 }
 
@@ -251,17 +251,21 @@ h6 {
 }
 
 #hero h1 {
+  padding-left: 250px;
+  padding-top: 100px;
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: 100px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
 }
 
 #hero p {
+  padding-left: 320px;
+  padding-top: 10px;
   color: #fff;
   margin-bottom: 50px;
-  font-size: 26px;
+  font-size: 35px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -295,7 +299,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 15px 0;
   overflow: hidden;
 }
 
@@ -320,7 +324,7 @@ section {
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 0px;
   height: 3px;
   background: #149ddd;
   bottom: 0;
@@ -370,11 +374,12 @@ section {
 # Facts
 --------------------------------------------------------------*/
 .facts {
-  padding-bottom: 30px;
+  padding-top: -10px;
+  padding-bottom: 10px;
 }
 
 .facts .count-box {
-  padding: 30px;
+  padding: 15px;
   width: 100%;
 }
 

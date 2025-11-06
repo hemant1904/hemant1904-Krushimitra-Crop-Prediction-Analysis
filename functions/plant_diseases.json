@@ -1,0 +1,100 @@
+{
+    "tomato": {
+        "early_blight": {
+            "scientific_name": "Alternaria solani",
+            "common_name": "Early Blight",
+            "symptoms": "Dark brown spots with concentric rings on leaves",
+            "solution": "1. Remove infected leaves and improve air circulation\n2. Apply copper-based fungicides like Mancozeb or Chlorothalonil\n3. Use organic fungicides like neem oil or copper sulfate\n4. Apply balanced NPK fertilizer (10-10-10) to strengthen plant immunity\n5. Water at soil level to avoid wetting leaves"
+        },
+        "late_blight": {
+            "scientific_name": "Phytophthora infestans",
+            "common_name": "Late Blight",
+            "symptoms": "Water-soaked spots on leaves, white fuzzy growth",
+            "solution": "1. Remove infected plants immediately\n2. Apply systemic fungicides containing Metalaxyl or Azoxystrobin\n3. Use protective fungicides like copper oxychloride\n4. Apply calcium-rich fertilizers to strengthen cell walls\n5. Avoid overhead watering and maintain proper spacing"
+        },
+        "leaf_spot": {
+            "scientific_name": "Septoria lycopersici",
+            "common_name": "Septoria Leaf Spot",
+            "symptoms": "Small brown spots with yellow halos on leaves",
+            "solution": "1. Practice crop rotation and remove infected debris\n2. Apply chlorothalonil-based fungicides\n3. Use organic options like copper fungicides or Bacillus subtilis\n4. Apply balanced fertilizer with micronutrients\n5. Maintain proper spacing for air flow"
+        }
+    },
+    "cucumber": {
+        "powdery_mildew": {
+            "scientific_name": "Podosphaera xanthii",
+            "common_name": "Cucumber Powdery Mildew",
+            "symptoms": "White powdery spots on leaves and stems",
+            "solution": "1. Apply sulfur-based fungicides\n2. Use potassium bicarbonate or neem oil sprays\n3. Apply systemic fungicides containing Trifloxystrobin\n4. Use silicon-rich fertilizers to strengthen plant resistance\n5. Improve air circulation and avoid overhead watering"
+        },
+        "downy_mildew": {
+            "scientific_name": "Pseudoperonospora cubensis",
+            "common_name": "Cucumber Downy Mildew",
+            "symptoms": "Yellow angular spots on upper leaf surface",
+            "solution": "1. Apply copper-based fungicides preventively\n2. Use systemic fungicides with Mancozeb or Metalaxyl\n3. Spray phosphorous acid-based fungicides\n4. Apply balanced NPK fertilizer with added calcium\n5. Water early in the day to reduce humidity"
+        }
+    },
+    "potato": {
+        "black_scurf": {
+            "scientific_name": "Rhizoctonia solani",
+            "common_name": "Black Scurf",
+            "symptoms": "Black, irregular patches on tubers",
+            "solution": "1. Apply azoxystrobin-based fungicides to soil\n2. Use biological fungicides containing Trichoderma\n3. Apply balanced NPK fertilizer (5-10-10)\n4. Add organic matter to improve soil structure\n5. Practice crop rotation and field sanitation"
+        },
+        "common_scab": {
+            "scientific_name": "Streptomyces scabies",
+            "common_name": "Common Scab",
+            "symptoms": "Rough, corky patches on tuber surface",
+            "solution": "1. Maintain soil pH below 5.5\n2. Apply sulfur-based soil amendments\n3. Use calcium nitrate fertilizer during growing season\n4. Ensure adequate soil moisture during tuber formation\n5. Apply organic matter to improve soil health"
+        }
+    },
+    "rice": {
+        "blast": {
+            "scientific_name": "Magnaporthe oryzae",
+            "common_name": "Rice Blast",
+            "symptoms": "Diamond-shaped lesions on leaves",
+            "solution": "1. Apply systemic fungicides like Tricyclazole\n2. Use preventive fungicides containing Isoprothiolane\n3. Apply silicon-rich fertilizers\n4. Maintain balanced nitrogen application\n5. Ensure good field drainage"
+        },
+        "bacterial_blight": {
+            "scientific_name": "Xanthomonas oryzae",
+            "common_name": "Bacterial Leaf Blight",
+            "symptoms": "Yellow to white stripes on leaf blades",
+            "solution": "1. Apply copper oxychloride as preventive measure\n2. Use streptocycline for severe infections\n3. Apply balanced NPK fertilizer (15-15-15)\n4. Avoid excess nitrogen application\n5. Maintain proper spacing and remove infected plants"
+        }
+    },
+    "wheat": {
+        "rust": {
+            "scientific_name": "Puccinia graminis",
+            "common_name": "Stem Rust",
+            "symptoms": "Orange-brown pustules on leaves and stems",
+            "solution": "1. Apply propiconazole-based fungicides\n2. Use tebuconazole fungicides preventively\n3. Apply balanced NPK fertilizer with micronutrients\n4. Monitor fields regularly\n5. Time planting to avoid favorable conditions"
+        }
+    },
+    "corn": {
+        "northern_leaf_blight": {
+            "scientific_name": "Exserohilum turcicum",
+            "common_name": "Northern Corn Leaf Blight",
+            "symptoms": "Long, cigar-shaped gray-green lesions on leaves",
+            "solution": "1. Apply strobilurin-based fungicides\n2. Use preventive fungicides with propiconazole\n3. Apply balanced NPK fertilizer (10-20-20)\n4. Remove crop debris after harvest\n5. Rotate crops and plant resistant hybrids"
+        },
+        "common_rust": {
+            "scientific_name": "Puccinia sorghi",
+            "common_name": "Common Rust",
+            "symptoms": "Small, circular to elongated brown pustules on leaves",
+            "solution": "1. Apply triazole fungicides early in season\n2. Use chlorothalonil-based fungicides\n3. Apply balanced fertilizer with zinc\n4. Monitor fields regularly\n5. Use resistant varieties"
+        }
+    },
+    "soybean": {
+        "sudden_death": {
+            "scientific_name": "Fusarium virguliforme",
+            "common_name": "Sudden Death Syndrome",
+            "symptoms": "Interveinal chlorosis and necrosis of leaves",
+            "solution": "1. Apply thiabendazole seed treatment\n2. Use biological fungicides with Trichoderma\n3. Apply balanced NPK fertilizer with manganese\n4. Improve drainage and avoid compaction\n5. Rotate crops and plant resistant varieties"
+        },
+        "brown_spot": {
+            "scientific_name": "Septoria glycines",
+            "common_name": "Brown Spot",
+            "symptoms": "Dark brown spots with yellow halos on leaves",
+            "solution": "1. Apply strobilurin fungicides\n2. Use copper-based fungicides preventively\n3. Apply balanced fertilizer with potassium\n4. Improve air circulation\n5. Remove infected debris and rotate crops"
+        }
+    }
+}

@@ -1,54 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Prediction Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-  <title>Yeild_Prediction_Form</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+        #canvas-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background: #0a2f0a;
+        }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+        .container {
+            position: relative;
+            background: rgba(0, 12, 0, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(200, 230, 200, 0.15);
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+        .container:hover {
+            transform: translateY(-5px);
+        }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        h2 {
+            text-align: center;
+            color: #c8e6c9;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
 
-  <!-- Template Main CSS File -->
-  <link href="static/style.css" rel="stylesheet">
+        h2::before {
+            content: '🌾 ';
+        }
 
+        h2::after {
+            content: ' 🌾';
+        }
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: #81c784;
+            margin: 15px auto;
+        }
+
+        .form-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-bottom: 30px;
+            padding-right: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-group {
+            background: rgba(40, 80, 40, 0.4);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(200, 230, 200, 0.1);
+            transition: all 0.3s ease;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-color: rgba(200, 230, 200, 0.3);
+        }
+
+        label {
+            color: #c8e6c9;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #ffffff !important;
+            color: #000000;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-top: auto;
+            height: 45px;
+            box-sizing: border-box;
+            opacity: 1;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #81c784;
+            box-shadow: 0 0 8px rgba(129, 199, 132, 0.3);
+        }
+
+        input::placeholder {
+            color: #000000;
+        }
+
+        select option {
+            color: #000000;
+            background: #ffffff;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            background: linear-gradient(135deg, #2d5e30 0%, #0a2f0c 100%);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #234a25 0%, #071f08 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+                margin: 10px auto;
+                max-height: 85vh;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-  <form action="/yield_prediction" method="post" id="form1">
-    <label for="state">State:</label>
-    <input type="text" name="state">
+    <div id="canvas-container"></div>
+    
+    <form action="/yield_prediction" method="post" class="container">
+        <h2>Yield Prediction Form</h2>
 
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="state">State:</label>
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                </select>
+            </div>
 
-    <label for="crop_year">Crop_year:</label>
-    <input type="number" name="crop_year">
+            <div class="form-group">
+                <label for="crop_year">Crop Year:</label>
+                <input type="number" id="crop_year" name="crop_year" required placeholder="Enter year">
+            </div>
 
+            <div class="form-group">
+                <label for="season">Season:</label>
+                <select id="season" name="season" required disabled>
+                    <option value="">Select Season</option>
+                </select>
+            </div>
 
-    <label for="season">Season</label>
-    <input type="text" name="season">
+            <div class="form-group">
+                <label for="crop">Crop:</label>
+                <select id="crop" name="crop" required disabled>
+                    <option value="">Select Crop</option>
+                </select>
+            </div>
 
+            <div class="form-group">
+                <label for="area">Area (in hectares):</label>
+                <input type="number" id="area" name="area" required min="0" placeholder="Enter area in hectares">
+            </div>
 
-    <label for="crop">Crop:</label>
-    <input type="text" name="crop">
+        <input type="submit" value="Predict Yield" class="btn">
+    </form>
 
+    <script>
+        // Load yield prediction data
+        fetch('/static/functions/yieldpred.json')
+            .then(response => response.json())
+            .then(data => {
+                const stateSelect = document.getElementById('state');
+                const seasonSelect = document.getElementById('season');
+                const cropSelect = document.getElementById('crop');
 
-    <label for="area">Area:</label>
-    <input type="number" name="area">
-<input type="submit" value="Submit">
-</form>
+                // Populate states
+                Object.keys(data).sort().forEach(state => {
+                    const option = document.createElement('option');
+                    option.value = state;
+                    option.textContent = state;
+                    stateSelect.appendChild(option);
+                });
+
+                // Handle state selection
+                stateSelect.addEventListener('change', function() {
+                    const selectedState = this.value;
+                    seasonSelect.innerHTML = '<option value="">Select Season</option>';
+                    cropSelect.innerHTML = '<option value="">Select Crop</option>';
+                    
+                    if (selectedState) {
+                        // Enable and populate seasons dropdown
+                        seasonSelect.disabled = false;
+                        const seasons = Object.keys(data[selectedState]).sort();
+                        seasons.forEach(season => {
+                            const option = document.createElement('option');
+                            option.value = season;
+                            option.textContent = season;
+                            seasonSelect.appendChild(option);
+                        });
+                    } else {
+                        seasonSelect.disabled = true;
+                        cropSelect.disabled = true;
+                    }
+                });
+
+                // Handle season selection
+                seasonSelect.addEventListener('change', function() {
+                    const selectedState = stateSelect.value;
+                    const selectedSeason = this.value;
+                    cropSelect.innerHTML = '<option value="">Select Crop</option>';
+
+                    if (selectedState && selectedSeason) {
+                        // Enable and populate crops dropdown
+                        cropSelect.disabled = false;
+                        const crops = Object.keys(data[selectedState][selectedSeason]).sort();
+                        crops.forEach(crop => {
+                            const option = document.createElement('option');
+                            option.value = crop;
+                            option.textContent = crop;
+                            cropSelect.appendChild(option);
+                        });
+                    } else {
+                        cropSelect.disabled = true;
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error loading yield prediction data:', error);
+                alert('Error loading crop data. Please try again later.');
+            });
+
+        // Three.js Scene Setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        // Create Floating Particles
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particleCount = 700;
+        const posArray = new Float32Array(particleCount * 3);
+
+        for(let i = 0; i < particleCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 15;
+        }
+
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.015,
+            color: 0x81c784,
+            transparent: true,
+            opacity: 0.4
+        });
+
+        const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+        scene.add(particles);
+
+        // Create Floating Leaves (Triangle geometries)
+        const leafGeometry = new THREE.BufferGeometry();
+        const leafVertices = new Float32Array([
+            0, 0.15, 0,
+            -0.08, -0.15, 0,
+            0.08, -0.15, 0
+        ]);
+        leafGeometry.setAttribute('position', new THREE.BufferAttribute(leafVertices, 3));
+
+        const leaves = [];
+        const leafCount = 40;
+
+        for(let i = 0; i < leafCount; i++) {
+            const leaf = new THREE.Line(
+                leafGeometry,
+                new THREE.LineBasicMaterial({ 
+                    color: 0x4a9d4f,
+                    transparent: true,
+                    opacity: 0.6
+                })
+            );
+            leaf.position.set(
+                Math.random() * 15 - 7.5,
+                Math.random() * 8 - 4,
+                Math.random() * 15 - 7.5
+            );
+            leaf.speed = Math.random() * 0.015 + 0.008;
+            leaf.originalY = leaf.position.y;
+            scene.add(leaf);
+            leaves.push(leaf);
+        }
+
+        camera.position.z = 5;
+
+        // Animation Loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Animate Leaves
+            leaves.forEach((leaf, index) => {
+                leaf.position.x += leaf.speed;
+                leaf.position.y = leaf.originalY + Math.sin(Date.now() * 0.001 + index) * 0.3;
+                leaf.rotation.z = Math.sin(Date.now() * 0.001 + index) * 0.5;
+                
+                if(leaf.position.x > 5) leaf.position.x = -5;
+            });
+
+            // Animate Particles
+            particles.rotation.y += 0.001;
+            particles.rotation.x += 0.001;
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        // Handle Window Resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
 </body>
+</html>

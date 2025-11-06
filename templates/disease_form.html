@@ -1,37 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Plant Disease Prevention - Crop Prediction Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="static/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+  <style>
+    :root {
+      --deep-forest: #0a1f0a;
+      --medium-forest: #143d1c;
+      --light-forest: #1b4d25;
+      --leaf-accent: #90ee90;
+      --text-light: #ffffff;
+      --text-dark: #2c1810;
+      --shadow-color: rgba(0, 0, 0, 0.25);
+    }
 
-  <title>iPortfolio Bootstrap Template - Index</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: 
+        linear-gradient(145deg, var(--deep-forest), var(--medium-forest), var(--light-forest)),
+        radial-gradient(circle at 60% 70%, rgba(46, 125, 50, 0.2) 0%, transparent 70%),
+        radial-gradient(circle at 30% 30%, rgba(76, 175, 80, 0.15) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(144, 238, 144, 0.1) 0%, transparent 50%);
+      background-attachment: fixed;
+      color: var(--text-light);
+      perspective: 1500px;
+    }
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    .form-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      box-shadow: 
+        0 20px 40px var(--shadow-color),
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+        0 0 20px rgba(144, 238, 144, 0.05);
+      padding: 35px;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      transform: perspective(1500px) rotateX(0deg) translateZ(0);
+      transform-style: preserve-3d;
+    }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    .form-card:hover {
+      transform: perspective(1000px) rotateX(2deg) translateY(-5px) translateZ(10px);
+      box-shadow: 
+        0 20px 40px var(--shadow-color),
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+    }
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    .disease {
+      padding: 50px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 100px);
+    }
 
-  <!-- Template Main CSS File -->
-  <link href="static/style.css" rel="stylesheet">
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
+    .form-card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      padding: 30px;
+      transition: all 0.4s ease;
+      margin: 0 auto;
+      max-width: 600px;
+      width: 100%;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .form-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .section-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 40px;
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+      position: relative;
+      left: 30%;
+      transform: translateX(-50%);
+    }
+
+    .section-title h2 {
+      color: var(--leaf-accent);
+      font-size: 2.5rem;
+      font-weight: 600;
+      position: center;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .section-title p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+      padding-top: 5px;
+    }
+
+    .disease {
+      padding: 50px 0;
+      min-height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+    }
+
+    .form-group label {
+      color: var(--leaf-accent);
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+      display: block;
+      transform: translateX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .form-group:hover label {
+      transform: translateX(5px);
+    }
+
+    .form-control {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 15px;
+      color: var(--text-light);
+      font-size: 1.1rem;
+      transition: all 0.4s ease;
+      width: 100%;
+      margin-bottom: 20px;
+      transform-origin: left;
+      animation: formControl 0.5s ease-out;
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+    }
+
+    .form-control:focus {
+      border-color: #4caf50;
+      box-shadow: 0 0 0 0.2rem rgba(76,175,80,0.25);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes formControl {
+      from {
+        opacity: 0;
+        transform: scaleX(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    .btn-primary {
+      background-color: #2e7d32;
+      border: none;
+      padding: 15px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      transition: all 0.3s;
+      display: inline-block;
+      margin: 20px auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary:hover {
+      background-color: #1b5e20;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+    }
+
+    .btn-primary:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+
+    .btn-primary::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+      background-color: #2e7d32;
+    }
+  </style>
 </head>
-
 <body>
-    <form action="/disease_detection" method="post" enctype="multipart/form-data">
-        <input type="file" name="image">
-        <input type="submit">
-    </form>
+  <main id="main">
+    <section id="disease" class="disease">
+      <div class="container">
+        <div class="section-title">
+          <h2>
+            🌾 Plant Disease Detection 🌾 </h2>
+          <p>Select your plant and disease type to get treatment recommendations</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <form action="/disease_detection" method="post" class="form-card">
+              <div class="form-group mb-4">
+                <label for="plant_name">Crop Name</label>
+                <select class="form-control" id="plant_name" name="plant_name" required onchange="updateDiseases()">
+                  <option value="">Select Crop Name</option>
+                  <option value="tomato">Tomato</option>
+                  <option value="cucumber">Cucumber</option>
+                  <option value="potato">Potato</option>
+                  <option value="rice">Rice</option>
+                  <option value="wheat">Wheat</option>
+                  <option value="corn">Corn</option>
+                  <option value="soybean">Soybean</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-4">
+                <label for="disease_name">Disease Type</label>
+                <select class="form-control" id="disease_name" name="disease_name" required>
+                  <option value="">Select Disease Type</option>
+                </select>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" style="display: block; margin: 20px auto;">Get Solution</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const diseaseData = {
+      'tomato': {
+        'early_blight': 'Early Blight (Alternaria solani)',
+        'late_blight': 'Late Blight (Phytophthora infestans)',
+        'leaf_spot': 'Septoria Leaf Spot (Septoria lycopersici)'
+      },
+      'cucumber': {
+        'powdery_mildew': 'Powdery Mildew (Podosphaera xanthii)',
+        'downy_mildew': 'Downy Mildew (Pseudoperonospora cubensis)'
+      },
+      'potato': {
+        'black_scurf': 'Black Scurf (Rhizoctonia solani)',
+        'common_scab': 'Common Scab (Streptomyces scabies)'
+      },
+      'rice': {
+        'blast': 'Rice Blast (Magnaporthe oryzae)',
+        'bacterial_blight': 'Bacterial Leaf Blight (Xanthomonas oryzae)'
+      },
+      'wheat': {
+        'rust': 'Stem Rust (Puccinia graminis)'
+      },
+      'corn': {
+        'northern_leaf_blight': 'Northern Corn Leaf Blight (Exserohilum turcicum)',
+        'common_rust': 'Common Rust (Puccinia sorghi)'
+      },
+      'soybean': {
+        'sudden_death': 'Sudden Death Syndrome (Fusarium virguliforme)',
+        'brown_spot': 'Brown Spot (Septoria glycines)'
+      }
+    };
+
+    function updateDiseases() {
+      const plantSelect = document.getElementById('plant_name');
+      const diseaseSelect = document.getElementById('disease_name');
+      const selectedPlant = plantSelect.value;
+
+      // Clear existing options
+      diseaseSelect.innerHTML = '<option value="">Select Disease Type</option>';
+
+      if (selectedPlant && diseaseData[selectedPlant]) {
+        Object.entries(diseaseData[selectedPlant]).forEach(([value, text]) => {
+          const option = document.createElement('option');
+          option.value = value;
+          option.textContent = text;
+          diseaseSelect.appendChild(option);
+        });
+      }
+    }
+  </script>
 </body>
+</html>

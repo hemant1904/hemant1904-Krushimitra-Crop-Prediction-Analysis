@@ -1,0 +1,342 @@
+{
+  "Maharashtra": {
+    "Kharif": {
+      "Rice": 4500,
+      "Cotton": 6200,
+      "Soybean": 5800,
+      "Pigeon Pea": 3200,
+      "Turmeric": 4100,
+      "Black Gram": 2800
+    },
+    "Rabi": {
+      "Wheat": 3900,
+      "Chickpea": 2800,
+      "Onion": 7500,
+      "Potato": 6800,
+      "Mustard": 2900,
+      "Garlic": 5400
+    },
+    "Summer": {
+      "Vegetables": 3200,
+      "Groundnut": 2600,
+      "Sugarcane": 8400,
+      "Mung Bean": 2400,
+      "Watermelon": 3800,
+      "Bitter Gourd": 2900
+    },
+    "Zaid": {
+      "Cucumber": 1800,
+      "Watermelon": 2500,
+      "Green Vegetables": 3100,
+      "Bottle Gourd": 2700,
+      "Ridge Gourd": 2400,
+      "Pumpkin": 3000
+    }
+  },
+  "Punjab": {
+    "Kharif": {
+      "Rice": 7800,
+      "Cotton": 5600,
+      "Maize": 4900,
+      "Moong": 2700,
+      "Sesame": 2400,
+      "Sorghum": 3800
+    },
+    "Rabi": {
+      "Wheat": 8200,
+      "Mustard": 3700,
+      "Potato": 6400,
+      "Barley": 4200,
+      "Peas": 3500,
+      "Lentil": 2800
+    },
+    "Summer": {
+      "Sunflower": 2800,
+      "Vegetables": 3500,
+      "Sugarcane": 7200,
+      "Muskmelon": 3200,
+      "Bottle Gourd": 2900,
+      "Okra": 3100
+    },
+    "Zaid": {
+      "Cucumber": 1500,
+      "Muskmelon": 2200,
+      "Fodder": 3800,
+      "Bitter Gourd": 2600,
+      "Ridge Gourd": 2300,
+      "Pumpkin": 2800
+    }
+  },
+  "Tamil Nadu": {
+    "Kharif": {
+      "Rice": 5300,
+      "Sugarcane": 8100,
+      "Groundnut": 3900,
+      "Black Gram": 2600,
+      "Green Gram": 2400,
+      "Sesame": 2200
+    },
+    "Rabi": {
+      "Rice": 4800,
+      "Pulses": 2500,
+      "Sorghum": 3400,
+      "Maize": 4200,
+      "Cotton": 5100,
+      "Sunflower": 2700
+    },
+    "Summer": {
+      "Cotton": 4200,
+      "Vegetables": 3700,
+      "Coconut": 6900,
+      "Sesame": 2300,
+      "Groundnut": 3500,
+      "Pearl Millet": 3200
+    },
+    "Zaid": {
+      "Watermelon": 2300,
+      "Vegetables": 2800,
+      "Fodder": 3400,
+      "Bitter Gourd": 2500,
+      "Ridge Gourd": 2200,
+      "Pumpkin": 2700
+    }
+  },
+  "West Bengal": {
+    "Kharif": {
+      "Rice": 6700,
+      "Jute": 5400,
+      "Maize": 3800,
+      "Black Gram": 2500,
+      "Green Gram": 2300,
+      "Sesame": 2100
+    },
+    "Rabi": {
+      "Wheat": 4500,
+      "Mustard": 3200,
+      "Potato": 7300,
+      "Lentil": 2600,
+      "Peas": 3100,
+      "Gram": 2800
+    },
+    "Summer": {
+      "Rice": 5800,
+      "Vegetables": 4200,
+      "Jute": 4900,
+      "Sesame": 2200,
+      "Groundnut": 3300,
+      "Mung Bean": 2400
+    },
+    "Zaid": {
+      "Cucumber": 1600,
+      "Vegetables": 2900,
+      "Fodder": 3300,
+      "Bitter Gourd": 2400,
+      "Ridge Gourd": 2100,
+      "Pumpkin": 2600
+    }
+  },
+  "Uttar Pradesh": {
+    "Kharif": {
+      "Rice": 5900,
+      "Maize": 4700,
+      "Sugarcane": 8600,
+      "Black Gram": 2700,
+      "Green Gram": 2500,
+      "Sesame": 2300
+    },
+    "Rabi": {
+      "Wheat": 7600,
+      "Barley": 3800,
+      "Potato": 6800,
+      "Peas": 3300,
+      "Gram": 3000,
+      "Mustard": 3500
+    },
+    "Summer": {
+      "Vegetables": 4300,
+      "Pulses": 3100,
+      "Sugarcane": 9200,
+      "Muskmelon": 3400,
+      "Watermelon": 3600,
+      "Bottle Gourd": 3000
+    },
+    "Zaid": {
+      "Cucumber": 1700,
+      "Watermelon": 2100,
+      "Fodder": 3600,
+      "Bitter Gourd": 2500,
+      "Ridge Gourd": 2200,
+      "Pumpkin": 2700
+    }
+  },
+  "Bihar": {
+    "Kharif": {
+      "Rice": 5200,
+      "Maize": 4400,
+      "Sugarcane": 7800,
+      "Black Gram": 2600,
+      "Green Gram": 2400,
+      "Sesame": 2200
+    },
+    "Rabi": {
+      "Wheat": 6300,
+      "Gram": 3500,
+      "Lentil": 2900,
+      "Peas": 3200,
+      "Mustard": 3400,
+      "Potato": 6500
+    },
+    "Summer": {
+      "Vegetables": 3800,
+      "Moong": 2700,
+      "Jute": 4600,
+      "Muskmelon": 3100,
+      "Watermelon": 3300,
+      "Bottle Gourd": 2800
+    },
+    "Zaid": {
+      "Cucumber": 1400,
+      "Pumpkin": 1900,
+      "Fodder": 3200,
+      "Bitter Gourd": 2300,
+      "Ridge Gourd": 2000,
+      "Bottle Gourd": 2500
+    }
+  },
+  "Rajasthan": {
+    "Kharif": {
+      "Bajra": 4100,
+      "Jowar": 3700,
+      "Groundnut": 3500,
+      "Moong": 2500,
+      "Moth Bean": 2300,
+      "Sesame": 2100
+    },
+    "Rabi": {
+      "Wheat": 5400,
+      "Barley": 3600,
+      "Mustard": 4800,
+      "Gram": 3200,
+      "Cumin": 2500,
+      "Fenugreek": 2700
+    },
+    "Summer": {
+      "Vegetables": 2900,
+      "Fodder": 3600,
+      "Watermelon": 2400,
+      "Muskmelon": 2600,
+      "Bottle Gourd": 2300,
+      "Ridge Gourd": 2100
+    },
+    "Zaid": {
+      "Cucumber": 1300,
+      "Muskmelon": 2000,
+      "Vegetables": 2600,
+      "Bitter Gourd": 2200,
+      "Ridge Gourd": 1900,
+      "Pumpkin": 2400
+    }
+  },
+  "Gujarat": {
+    "Kharif": {
+      "Cotton": 6400,
+      "Groundnut": 5300,
+      "Bajra": 4200,
+      "Sesame": 2400,
+      "Green Gram": 2600,
+      "Black Gram": 2500
+    },
+    "Rabi": {
+      "Wheat": 5100,
+      "Mustard": 3900,
+      "Cumin": 2700,
+      "Gram": 3300,
+      "Fennel": 2800,
+      "Potato": 6200
+    },
+    "Summer": {
+      "Vegetables": 3300,
+      "Bajra": 3800,
+      "Groundnut": 4700,
+      "Muskmelon": 3000,
+      "Watermelon": 3200,
+      "Bottle Gourd": 2700
+    },
+    "Zaid": {
+      "Watermelon": 2400,
+      "Muskmelon": 2100,
+      "Fodder": 3000,
+      "Bitter Gourd": 2300,
+      "Ridge Gourd": 2000,
+      "Pumpkin": 2500
+    }
+  },
+  "Andhra Pradesh": {
+    "Kharif": {
+      "Rice": 5700,
+      "Cotton": 5500,
+      "Chilli": 4800,
+      "Black Gram": 2800,
+      "Green Gram": 2600,
+      "Groundnut": 3700
+    },
+    "Rabi": {
+      "Rice": 5200,
+      "Pulses": 3300,
+      "Sunflower": 3600,
+      "Maize": 4400,
+      "Chickpea": 3000,
+      "Mustard": 3200
+    },
+    "Summer": {
+      "Vegetables": 3900,
+      "Pulses": 2800,
+      "Sugarcane": 7300,
+      "Muskmelon": 3300,
+      "Watermelon": 3500,
+      "Bottle Gourd": 2900
+    },
+    "Zaid": {
+      "Watermelon": 2500,
+      "Vegetables": 3100,
+      "Fodder": 3500,
+      "Bitter Gourd": 2400,
+      "Ridge Gourd": 2100,
+      "Pumpkin": 2600
+    }
+  },
+  "Karnataka": {
+    "Kharif": {
+      "Rice": 4800,
+      "Jowar": 3900,
+      "Cotton": 5300,
+      "Green Gram": 2500,
+      "Black Gram": 2400,
+      "Groundnut": 3600
+    },
+    "Rabi": {
+      "Wheat": 4200,
+      "Pulses": 3100,
+      "Sorghum": 3700,
+      "Chickpea": 2900,
+      "Sunflower": 3300,
+      "Safflower": 2600
+    },
+    "Summer": {
+      "Sugarcane": 7100,
+      "Vegetables": 3600,
+      "Paddy": 4700,
+      "Muskmelon": 3200,
+      "Watermelon": 3400,
+      "Bottle Gourd": 2800
+    },
+    "Zaid": {
+      "Watermelon": 2300,
+      "Cucumber": 1600,
+      "Fodder": 3200,
+      "Bitter Gourd": 2200,
+      "Ridge Gourd": 1900,
+      "Pumpkin": 2400
+    }
+  }
+}

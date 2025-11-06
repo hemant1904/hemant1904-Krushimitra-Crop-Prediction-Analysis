@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Farmer's body -->
+  <circle cx="200" cy="150" r="50" fill="#ffd699"/> <!-- Head -->
+  <path d="M150 200 Q200 300 250 200" fill="#4a90e2" stroke="#2c3e50" stroke-width="2"/> <!-- Body -->
+  
+  <!-- Happy face -->
+  <circle cx="180" cy="140" r="5" fill="#2c3e50"/> <!-- Left eye -->
+  <circle cx="220" cy="140" r="5" fill="#2c3e50"/> <!-- Right eye -->
+  <path d="M170 160 Q200 180 230 160" fill="none" stroke="#2c3e50" stroke-width="3"/> <!-- Smile -->
+  
+  <!-- Hat -->
+  <path d="M150 120 Q200 80 250 120" fill="#8b4513" stroke="#2c3e50" stroke-width="2"/>
+  
+  <!-- Mobile phone -->
+  <rect x="240" y="180" width="30" height="50" fill="#2c3e50" rx="5"/>
+  <rect x="245" y="185" width="20" height="35" fill="#fff"/>
+  
+  <!-- Arms -->
+  <path d="M230 220 L270 200" fill="none" stroke="#4a90e2" stroke-width="15"/> <!-- Right arm holding phone -->
+  <path d="M170 220 L130 200" fill="none" stroke="#4a90e2" stroke-width="15"/> <!-- Left arm -->
+</svg>

@@ -1,11 +1,11 @@
+import json
 def yieldPredict(state,Crop_Year,season,crop,area,model,mydict):
-	model="/home/harsh/HARSH/projects/vcet hackathon 2k22 takshak farmer assistant/functions/yieldpred.pkl"
-    model = joblib.load(model)
-    mydict= json.load(open("/home/harsh/HARSH/projects/vcet hackathon 2k22 takshak farmer assistant/functions/yieldpred.txt"))
+	
+    mydict= json.load(open("C:\Users\heman\Crop-Prediction-Analysis\functions\yieldpred.txt"))
     state=mydict[state]
     season=mydict[season]
     crop=mydict[crop]
-    prediction=model.predict([[state,Crop_Year,season,crop,area]])
+    prediction=model.predict([[crop]])
     return(print(prediction))
 
 # //////////////////////uncomment below to test///////////////////////////

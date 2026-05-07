@@ -1,8 +1,6 @@
-import webbrowser
 import os
 import sys
 from flask import Flask, flash, redirect, render_template, request
-import cv2
 from werkzeug.utils import secure_filename
 import numpy
 from matplotlib import pyplot as plt

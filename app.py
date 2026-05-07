@@ -1,7 +1,4 @@
-from ast import Import
-#from flask_ngrok import run_with_ngrok
 import webbrowser
-# from importlib.metadata import requires
 from flask import Flask, flash, redirect, render_template, request
 import cv2
 from werkzeug.utils import secure_filename
